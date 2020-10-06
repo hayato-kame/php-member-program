@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// これがないとエラー
+use App\Member;    // 追加
+
 class MembersController extends Controller
 {
     /**
@@ -13,15 +16,14 @@ class MembersController extends Controller
      */
     public function index()
     {
-        // メッセージ一覧を取得
+       
         $members = Member::all();
 
-        // メッセージ一覧ビューでそれを表示
         return view('members.index', [
             'members' => $members,
         ]);
     }
-    }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -30,7 +32,12 @@ class MembersController extends Controller
      */
     public function create()
     {
-        //
+        $member = new Member;
+
+        
+        return view('members.create', [
+            'member' => $member,
+        ]);
     }
 
     /**

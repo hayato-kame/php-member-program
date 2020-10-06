@@ -19,6 +19,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-// Route::get('/', 'MembersController@index');
+//  Route::get('/members', 'MembersController@index');
 
 Route::resource('members', 'MembersController');

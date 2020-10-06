@@ -9,18 +9,25 @@
             <thead>
                 <tr>
                     <th>会員番号</th>
-                    <th>会員情報</th>
+                    <th>ユーザ名</th>
+                    <th>氏名</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($messages as $message)
+                @foreach ($members as $member)
                 <tr>
-                    <td>{{ $message->id }}</td>
-                    <td>{{ $message->content }}</td>
+                    <td style="text-align: right">{{ $member->number }}</td>
+                    <td>{{ $member->name }}</td>
+                    <td>{{ $member->full_name }}</td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
+    @else
+        <p>会員情報がありません</p>
     @endif
+    
+    
+    {!! link_to_route('members.create', '新規会員の作成', [], ['class' => 'btn btn-primary']) !!}
 
 @endsection
