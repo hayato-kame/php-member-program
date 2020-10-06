@@ -8,25 +8,54 @@
     </head>
 
     <body>
-        <header class="mb-4">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                {{-- トップページへのリンク --}}
-                <a class="navbar-brand" href="/">MemberProgram</a>
-
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="nav-bar">
-                    <ul class="navbar-nav mr-auto"></ul>
-                    <ul class="navbar-nav">
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <div class="container">
-            @yield('content')
+        <div id="container">
+            <header class="mb-4">
+                
+                <!--ここにロゴを配置する-->
+                
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                    {{-- トップページへのリンク --}}
+                    <a class="navbar-brand" href="/">MemberProgram</a>
+    
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="nav-bar">
+                        <ul class="navbar-nav mr-auto"></ul>
+                        <ul class="navbar-nav">
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+    
+            <main class="container">
+                @yield('content')
+            </main>
+            
+            <aside id="sidebar">
+                
+                <!--ここにログインフォームのファイルを取り込む-->
+                
+                <h2>最新ニュース</h2>
+                <ul>
+                    
+                    <li></li>
+                    
+                </ul>
+                
+                <h2>会員ブログ</h2>
+                <ul>
+                    
+                    <li></li>
+                    
+                </ul>
+                
+            </aside>
+            
+            <footer>
+                
+            </footer>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

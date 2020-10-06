@@ -13,7 +13,14 @@ class MembersController extends Controller
      */
     public function index()
     {
-        //
+        // メッセージ一覧を取得
+        $members = Member::all();
+
+        // メッセージ一覧ビューでそれを表示
+        return view('members.index', [
+            'members' => $members,
+        ]);
+    }
     }
 
     /**
